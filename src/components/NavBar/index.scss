@@ -31,4 +31,27 @@
 		text-transform: uppercase;
 		font-weight: 800;
 	}
+	&__links {
+		&-link {
+			display: flex;
+			font-weight: 700;
+			color: #fff;
+			flex-direction: row;
+			align-items: center;
+			padding: 16px 16px 16px 30px;
+			svg {
+				margin-right: 10px;
+				fill: #fff;
+				width: 32px;
+			}
+		}
+		&-linkSelected {
+			color: $blueLight;
+			svg {
+				margin-right: 10px;
+				fill: $blueLight;
+				width: 32px;
+			}
+		}
+	}
 }

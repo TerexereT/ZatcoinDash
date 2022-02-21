@@ -1,2 +1,2 @@
 export const baseUrl = '/';
-export const movimientos = `${baseUrl}/`;
+export const profile = `${baseUrl}profile`;

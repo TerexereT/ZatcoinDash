@@ -1,13 +1,35 @@
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import HomeIcon from '@mui/icons-material/Home';
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
+import classnames from 'classnames';
 import { FC, useContext } from 'react';
 import AppBarContext from '../../context/AppBarContext';
+import { baseUrl, profile } from '../../router/url';
 import './index.scss';
+
+interface LinksInt {
+	name: string;
+	icon: any;
+	url: string;
+}
 
 const NavBar: FC = () => {
 	const { drawer, toggleDrawer } = useContext(AppBarContext);
+	const links: LinksInt[] = [
+		{
+			name: 'Home',
+			icon: <HomeIcon />,
+			url: baseUrl,
+		},
+		{
+			name: 'Profile',
+			icon: <HomeIcon />,
+			url: profile,
+		},
+	];
+
 	return (
 		<>
 			<AppBar
@@ -36,7 +58,22 @@ const NavBar: FC = () => {
 			{drawer && (
 				<div className='drawer' onClick={() => toggleDrawer(false)}>
 					<div className='drawer__title'>menu</div>
-					<div className='drawer__links'></div>
+					<div className='drawer__links'>
+						{links.map((value, i) => {
+							const { name, icon, url } = value;
+							const urlUser = window.location.pathname === url;
+							return (
+								<div
+									className={classnames('drawer__links-link', {
+										'drawer__links-linkSelected': urlUser,
+									})}
+									key={i}>
+									{icon}
+									{name}
+								</div>
+							);
+						})}
+					</div>
 				</div>
 			)}
 		</>
