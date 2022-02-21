@@ -5,11 +5,13 @@ import { baseUrl } from './url';
 
 const Router: FC = () => {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path={baseUrl} element={<Home />} />
-			</Routes>
-		</BrowserRouter>
+		<>
+			<BrowserRouter>
+				<Routes>
+					<Route path={baseUrl} element={<Home />} />
+				</Routes>
+			</BrowserRouter>
+		</>
 	);
 };
 

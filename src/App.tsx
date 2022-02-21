@@ -2,14 +2,21 @@ import React from 'react';
 import './App.scss';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import { AppBarProvider } from './context/AppBarContext';
 import Router from './router';
 
 function App() {
 	return (
 		<div className='App'>
-			<NavBar />
-			<Router />
-			<Footer />
+			<AppBarProvider>
+				<>
+					<NavBar />
+					<div className='App__content'>
+						<Router />
+					</div>
+					<Footer />
+				</>
+			</AppBarProvider>
 		</div>
 	);
 }
