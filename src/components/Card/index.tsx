@@ -5,9 +5,9 @@ import LoginContext from 'context/LoginContext';
 import bnb from 'images/bnb-icon.svg';
 import shrimp from 'images/shrimp.png';
 import zc from 'images/zatcoin-icon.svg';
-import { stylesButton, stylesError, stylesS } from 'pages/Profile';
 import { FC, useContext } from 'react';
 import { ReactSVG } from 'react-svg';
+import { stylesButton, stylesError, stylesS } from 'styles/styles';
 import './index.scss';
 
 interface CardProps {

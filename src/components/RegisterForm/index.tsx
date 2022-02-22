@@ -5,8 +5,8 @@ import { Box, styled } from '@mui/system';
 import FormContext from 'context/FormContext';
 import LoginContext from 'context/LoginContext';
 import zatcoin from 'images/zatcoin.png';
-import { stylesButton, stylesDef, stylesError, stylesS, stylesSuccess } from 'pages/Profile';
 import React, { FC, Fragment, useContext } from 'react';
+import { stylesButton, stylesDef, stylesError, stylesS, stylesSuccess } from 'styles/styles';
 import './index.scss';
 
 interface RegisterFormInt {
