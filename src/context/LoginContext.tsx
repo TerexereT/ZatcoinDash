@@ -6,27 +6,27 @@ interface Props {
 
 interface LoginInt {
 	logged: boolean;
-	username: string;
-	password: string;
-	walletAddress: string;
+	// username: string;
+	// password: string;
+	// walletAddress: string;
 	login(): void;
 	logout(): void;
 }
 
 const LoginContext = createContext<LoginInt>({
 	logged: false,
-	username: '',
-	password: '',
-	walletAddress: '',
+	// username: '',
+	// password: '',
+	// walletAddress: '',
 	login: () => {},
 	logout: () => {},
 });
 
 export const LoginProvider = ({ children }: Props) => {
 	const [logged, setLogged] = useState(false);
-	const [username, setUsername] = useState('');
-	const [password, setPassword] = useState('');
-	const [walletAddress, setWalletAddress] = useState('');
+	// const [username, setUsername] = useState('');
+	// const [password, setPassword] = useState('');
+	// const [walletAddress, setWalletAddress] = useState('');
 
 	const login = () => {
 		setLogged(true);
@@ -40,9 +40,9 @@ export const LoginProvider = ({ children }: Props) => {
 		<LoginContext.Provider
 			value={{
 				logged,
-				username,
-				password,
-				walletAddress,
+				// username,
+				// password,
+				// walletAddress,
 				login,
 				logout,
 			}}>

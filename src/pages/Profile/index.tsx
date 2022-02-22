@@ -43,7 +43,7 @@ export const stylesError = {
 
 const Profile: FC = () => {
 	const [step, setStep] = useState(0);
-	const { logged, username } = useContext(LoginContext);
+	const { logged } = useContext(LoginContext);
 	useEffect(() => {
 		console.log('logged', logged);
 	}, [logged]);
