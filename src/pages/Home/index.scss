@@ -1,0 +1,20 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&__banner {
+		height: 100%;
+		margin: 40px 0 60px;
+		img {
+			width: 241px;
+			height: 241px;
+		}
+	}
+	&__grid {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 2rem;
+	}
+}

@@ -63,10 +63,20 @@ const NavBar: FC = () => {
 					anchor='left'
 					open={drawer}
 					onClose={() => toggleDrawer(false)}
+					ModalProps={{
+						BackdropProps: {
+							sx: {
+								backgroundColor: 'unset',
+							},
+						},
+					}}
 					PaperProps={{
 						sx: {
 							backgroundColor: 'unset',
 							top: '60px',
+							height: (theme) => {
+								return `${window.innerHeight - 60}px`;
+							},
 						},
 					}}>
 					<div className='drawer' onClick={() => toggleDrawer(false)}>
