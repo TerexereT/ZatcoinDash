@@ -1,4 +1,4 @@
-@import '../../globalstyles.scss';
+@import 'globalstyles.scss';
 
 .footer {
 	min-height: 67px;
@@ -7,7 +7,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #4b5563;
+	color: $darkGray;
 	// position: fixed;
 	bottom: 0;
 	z-index: 1000;

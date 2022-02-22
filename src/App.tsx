@@ -1,3 +1,4 @@
+import { FormProvider } from 'context/FormContext';
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import Footer from './components/Footer';
@@ -9,13 +10,15 @@ function App() {
 	return (
 		<div className='App'>
 			<AppBarProvider>
-				<BrowserRouter>
-					<NavBar />
-					<div className='App__content'>
-						<Router />
-					</div>
-					<Footer />
-				</BrowserRouter>
+				<FormProvider>
+					<BrowserRouter>
+						<NavBar />
+						<div className='App__content'>
+							<Router />
+						</div>
+						<Footer />
+					</BrowserRouter>
+				</FormProvider>
 			</AppBarProvider>
 		</div>
 	);

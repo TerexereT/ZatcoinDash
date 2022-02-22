@@ -1,4 +1,4 @@
-@import '../../globalstyles.scss';
+@import 'globalstyles.scss';
 .appbar {
 	&__title {
 		font-weight: 800;
@@ -24,7 +24,7 @@
 	&__title {
 		padding: 30px;
 		text-align: justify;
-		color: #4b5563;
+		color: $darkGray;
 		text-transform: uppercase;
 		font-weight: 800;
 	}
