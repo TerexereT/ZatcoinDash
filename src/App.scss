@@ -1,6 +1,7 @@
 .App {
 	text-align: center;
 	&__content {
+		height: calc(100vh - 60px);
 		padding: 60px 0 65px;
 	}
 }
