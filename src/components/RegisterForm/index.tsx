@@ -3,6 +3,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { Button } from '@mui/material';
 import { Box, styled } from '@mui/system';
 import FormContext from 'context/FormContext';
+import LoginContext from 'context/LoginContext';
 import zatcoin from 'images/zatcoin.png';
 import { stylesButton, stylesDef, stylesError, stylesS, stylesSuccess } from 'pages/Profile';
 import React, { FC, useContext } from 'react';
@@ -37,7 +38,6 @@ const Backdrop = styled('div')`
 
 const style = {
 	width: '429px',
-	// height: '344px',
 	p: '54px 0',
 	bgcolor: '#111827',
 	color: 'white',
@@ -54,6 +54,7 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 	const handleClose = () => setOpen(false);
 
 	const { username, email, walletAddress, changeUser, changeEmail, changeWalletAddress } = useContext(FormContext);
+	const { login } = useContext(LoginContext);
 
 	const stepsForm = [
 		{
@@ -79,6 +80,10 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 		},
 	];
 
+	const handleFinish = () => {
+		login();
+		setStep(0);
+	};
 	return (
 		<>
 			<div className='profile__card profile__card-2'>
@@ -142,11 +147,7 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 						<CheckCircleOutlineIcon />
 						<div className='modal__title'>SUCCESS</div>
 						<div className='modal__subtitle'>Congratulations, your account has been successfully created</div>
-						<Button
-							sx={{ ...stylesButton, ...stylesS, ...stylesSuccess }}
-							onClick={() => {
-								setStep(0);
-							}}>
+						<Button sx={{ ...stylesButton, ...stylesS, ...stylesSuccess }} onClick={handleFinish}>
 							Continue
 						</Button>
 					</Box>
