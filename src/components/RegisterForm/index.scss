@@ -1,0 +1,20 @@
+@import 'globalstyles.scss';
+
+.modal {
+	&__title {
+		margin: 20px 0;
+		font-size: 36px;
+		font-weight: bold;
+	}
+	&__subtitle {
+		max-width: 300px;
+		font-size: 16px;
+		text-align: justify;
+		margin-bottom: 2rem;
+	}
+	svg {
+		width: 48px;
+		height: 48px;
+		fill: $green;
+	}
+}

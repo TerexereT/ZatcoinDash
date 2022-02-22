@@ -1,8 +1,7 @@
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import { Button } from '@mui/material';
-import FormContext from 'context/FormContext';
-import zatcoin from 'images/zatcoin.png';
-import { FC, useContext, useState } from 'react';
+import RegisterForm from 'components/RegisterForm';
+import { FC, useState } from 'react';
 import './index.scss';
 
 export const stylesButton = {
@@ -14,8 +13,6 @@ export const stylesButton = {
 	margin: '0 13px',
 	textTransform: 'capitalize',
 } as const;
-
-export const stylesM = {};
 
 export const stylesS = {
 	width: '106px',
@@ -45,31 +42,6 @@ export const stylesError = {
 const Profile: FC = () => {
 	const [step, setStep] = useState(0);
 
-	const { username, email, walletAddress, changeUser, changeEmail, changeWalletAddress } = useContext(FormContext);
-
-	const stepsForm = [
-		{
-			field: 'Username',
-			value: username,
-			setter: changeUser,
-			placeholder: 'Enter your user name',
-			req: true,
-		},
-		{
-			field: 'E-mail Address',
-			value: email,
-			setter: changeEmail,
-			placeholder: 'Enter your E-mail',
-			req: true,
-		},
-		{
-			field: ' Wallet Address',
-			value: walletAddress,
-			setter: changeWalletAddress,
-			placeholder: '0x26D...26A5',
-			req: true,
-		},
-	];
 	return (
 		<div className='profile'>
 			<div className='profile__content'>
@@ -80,41 +52,7 @@ const Profile: FC = () => {
 					</div>
 				)}
 				{step === 2 ? (
-					<div className='profile__card profile__card-2'>
-						<div className='form'>
-							<div className='form__logo'>
-								<img src={zatcoin} alt='zatcoinLogo' />
-							</div>
-							<div className='form__right'>
-								<div className='form__title'>
-									<h1>Register</h1>
-									<p>Create your account at Zatcoin.</p>
-								</div>
-								<div className='form__inputs'>
-									{stepsForm.map((val, i) => {
-										const { field, value, req, placeholder, setter } = val;
-										return (
-											<>
-												<p>
-													{field}
-													{req ? '*' : ''}
-												</p>
-												<input placeholder={placeholder} value={value} onChange={(e) => setter(e.target.value)} />
-											</>
-										);
-									})}
-									<div className='form__buttons'>
-										<Button sx={{ ...stylesButton, ...stylesS, ...stylesDef }} onClick={() => setStep(2)}>
-											Register
-										</Button>
-										<Button sx={{ ...stylesButton, ...stylesS, ...stylesError }} onClick={() => setStep(0)}>
-											Cancel
-										</Button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<RegisterForm setStep={setStep} />
 				) : (
 					<div className='profile__card profile__card-1'>
 						{step === 0 && (
@@ -132,7 +70,7 @@ const Profile: FC = () => {
 						)}
 						{step === 1 && (
 							<>
-								<p style={{ marginBottom: 26 }}>This wallet is not registered in Zatcoin yet.</p>
+								<h5 style={{ marginBottom: 26 }}>This wallet is not registered in Zatcoin yet.</h5>
 								<p style={{ marginBottom: 42 }}>
 									You have to register and accept the
 									<b> term & conditions </b>
