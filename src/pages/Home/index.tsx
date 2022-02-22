@@ -1,8 +1,10 @@
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import InfoIcon from '@mui/icons-material/Info';
 import PeopleIcon from '@mui/icons-material/People';
 import PieChartIcon from '@mui/icons-material/PieChart';
 import SavingsIcon from '@mui/icons-material/Savings';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 import Card from 'components/Card';
 import zatcoin from 'images/zatcoin.png';
 import { FC } from 'react';
@@ -38,7 +40,7 @@ const Home: FC = () => {
 		{
 			title: 'Total Burned Tokens',
 			value: '1,053,044,669.86 Zatcoin',
-			icon: <PeopleIcon />,
+			icon: <WhatshotIcon />,
 		},
 	];
 
@@ -47,10 +49,16 @@ const Home: FC = () => {
 			<div className='home__banner'>
 				<img src={zatcoin} alt='zatcoinLogo' />
 			</div>
-			<div className='home__grid'>
-				{items.map(({ title, value, icon }, i) => (
-					<Card key={i} title={title} value={value} icon={icon} />
-				))}
+			<div className='home__content'>
+				<div className='home__content-header'>
+					<InfoIcon style={{ marginRight: 15 }} />
+					token info.
+				</div>
+				<div className='home__grid'>
+					{items.map(({ title, value, icon }, i) => (
+						<Card key={i} title={title} value={value} icon={icon} />
+					))}
+				</div>
 			</div>
 		</div>
 	);

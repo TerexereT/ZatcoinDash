@@ -11,6 +11,23 @@
 			height: 241px;
 		}
 	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		&-header {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			color: white;
+			font-size: 16px;
+			font-weight: 800;
+			margin-bottom: 2rem;
+			svg {
+				fill: white;
+			}
+		}
+	}
 	&__grid {
 		display: grid;
 		height: 100%;
