@@ -14,13 +14,13 @@
 	box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
 
 	&__left {
-		margin: 0 auto;
+		margin-left: 5%;
 		b {
 			color: $blueLight;
 		}
 	}
 	&__right {
-		margin: 0 auto;
+		margin-right: 5%;
 		display: flex;
 		justify-content: space-between;
 	}

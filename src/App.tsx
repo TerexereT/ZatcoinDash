@@ -1,4 +1,4 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
@@ -9,13 +9,13 @@ function App() {
 	return (
 		<div className='App'>
 			<AppBarProvider>
-				<>
+				<BrowserRouter>
 					<NavBar />
 					<div className='App__content'>
 						<Router />
 					</div>
 					<Footer />
-				</>
+				</BrowserRouter>
 			</AppBarProvider>
 		</div>
 	);

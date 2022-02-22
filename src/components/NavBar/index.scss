@@ -15,11 +15,11 @@
 }
 
 .drawer {
-	position: absolute;
+	// position: relative;
 	width: 320px;
 	height: calc(100% - 127px);
-	top: 60px;
-	left: 0;
+	// top: 60px;
+	// left: 0;
 	background: linear-gradient(180deg, rgba(31, 41, 55, 0.7) 0%, rgba(17, 24, 39, 0.4) 100%);
 	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(40px);
@@ -32,6 +32,9 @@
 		font-weight: 800;
 	}
 	&__links {
+		a {
+			text-decoration: none;
+		}
 		&-link {
 			display: flex;
 			font-weight: 700;
@@ -39,6 +42,11 @@
 			flex-direction: row;
 			align-items: center;
 			padding: 16px 16px 16px 30px;
+			&:hover {
+				background: linear-gradient(92.57deg, rgba(13, 202, 240, 0.2) -3.04%, rgba(0, 82, 120, 0.2) 108.21%);
+				backdrop-filter: blur(40px);
+				border-radius: 16px;
+			}
 			svg {
 				margin-right: 10px;
 				fill: #fff;
