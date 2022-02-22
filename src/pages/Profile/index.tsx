@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import { LoggedCard, ValuesLoggedCard } from 'components/Card';
 import RegisterForm from 'components/RegisterForm';
 import LoginContext from 'context/LoginContext';
-import { FC, useContext, useEffect, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 import './index.scss';
 
 export const stylesButton = {
@@ -44,9 +44,7 @@ export const stylesError = {
 const Profile: FC = () => {
 	const [step, setStep] = useState(0);
 	const { logged } = useContext(LoginContext);
-	useEffect(() => {
-		console.log('logged', logged);
-	}, [logged]);
+
 	return (
 		<div className='profile'>
 			<div className='profile__content'>

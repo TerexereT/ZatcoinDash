@@ -86,7 +86,7 @@ const NavBar: FC = () => {
 								const { name, icon, url } = value;
 								const urlUser = window.location.pathname === url;
 								return (
-									<Link to={url}>
+									<Link to={url} key={i + i + i}>
 										<div
 											className={classnames('drawer__links-link', {
 												'drawer__links-linkSelected': urlUser,

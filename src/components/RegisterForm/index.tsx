@@ -6,7 +6,7 @@ import FormContext from 'context/FormContext';
 import LoginContext from 'context/LoginContext';
 import zatcoin from 'images/zatcoin.png';
 import { stylesButton, stylesDef, stylesError, stylesS, stylesSuccess } from 'pages/Profile';
-import React, { FC, useContext } from 'react';
+import React, { FC, Fragment, useContext } from 'react';
 import './index.scss';
 
 interface RegisterFormInt {
@@ -100,8 +100,8 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 							{stepsForm.map((val, i) => {
 								const { field, value, req, placeholder, setter } = val;
 								return (
-									<>
-										<p key={i}>
+									<Fragment key={i}>
+										<p key={i + i + i + i}>
 											{field}
 											{req ? '*' : ''}
 										</p>
@@ -111,7 +111,7 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 											value={value}
 											onChange={(e) => setter(e.target.value)}
 										/>
-									</>
+									</Fragment>
 								);
 							})}
 							<div className='form__buttons'>
