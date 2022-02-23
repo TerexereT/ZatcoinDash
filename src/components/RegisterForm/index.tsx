@@ -13,7 +13,7 @@ interface RegisterFormInt {
 	setStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const StyledModal = styled(ModalUnstyled)`
+export const StyledModal = styled(ModalUnstyled)`
 	position: fixed;
 	z-index: 1300;
 	right: 0;
@@ -25,7 +25,7 @@ const StyledModal = styled(ModalUnstyled)`
 	justify-content: center;
 `;
 
-const Backdrop = styled('div')`
+export const Backdrop = styled('div')`
 	z-index: -1;
 	position: fixed;
 	right: 0;
