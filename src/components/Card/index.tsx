@@ -88,11 +88,6 @@ export const LoggedCard: FC<LoggedCardProps> = ({ user = 'Shrimp', value, icon }
 			icon: fish,
 		},
 		{
-			name: 'Fish Investor',
-			desc: 'Fish investor are users who hold between 100K and 500K Zatcoin',
-			icon: fish,
-		},
-		{
 			name: 'Octopus Investor',
 			desc: 'Octopus investor are users who hold between 10K and 100K Zatcoin',
 			icon: octopus,
