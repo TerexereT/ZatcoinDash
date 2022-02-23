@@ -3,7 +3,7 @@
 .footer {
 	min-height: 67px;
 	width: 100%;
-	background-color: $blueDark;
+	background-color: $darkBlue;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -16,7 +16,7 @@
 	&__left {
 		margin-left: 5%;
 		b {
-			color: $blueLight;
+			color: $lightBlue;
 		}
 	}
 	&__right {
@@ -35,7 +35,7 @@
 			margin-right: 10px;
 		}
 		svg {
-			color: $blueLight;
+			color: $lightBlue;
 		}
 	}
 }

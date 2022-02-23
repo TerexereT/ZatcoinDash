@@ -1,3 +1,4 @@
+@import 'globalstyles.scss';
 .home {
 	display: flex;
 	flex-direction: column;
@@ -19,12 +20,12 @@
 			display: flex;
 			align-items: center;
 			text-transform: uppercase;
-			color: white;
+			color: $white;
 			font-size: 16px;
 			font-weight: 800;
 			margin-bottom: 2rem;
 			svg {
-				fill: white;
+				fill: $white;
 			}
 		}
 	}

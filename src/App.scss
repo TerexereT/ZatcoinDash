@@ -1,8 +1,10 @@
+@import 'globalstyles.scss';
 .App {
 	text-align: center;
 	&__content {
-		height: calc(100vh - 60px);
-		padding: 60px 0 0;
+		height: 100%;
+		padding: 70px 0;
+		min-height: 100vh;
 	}
 }
 
@@ -25,7 +27,7 @@
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	color: white;
+	color: $white;
 }
 
 .App-link {
