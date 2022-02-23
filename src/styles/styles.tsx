@@ -44,3 +44,18 @@ export const stylesError = {
 		boxShadow: '0px 10px 20px 0px #BE123C',
 	},
 } as const;
+
+export const HambStyle = {
+	mr: 2,
+	zIndex: 2,
+	borderRadius: '10px',
+	'&:hover': {
+		bgcolor: '#111827',
+	},
+} as const;
+
+export const smallButton = {
+	'&:hover': {
+		bgcolor: 'rgba(0, 0, 0, 0.25)',
+	},
+} as const;

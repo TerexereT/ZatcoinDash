@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import classnames from 'classnames';
 import { FC, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { HambStyle } from 'styles/styles';
 import AppBarContext from '../../context/AppBarContext';
 import { baseUrl, profile } from '../../router/url';
 import './index.scss';
@@ -49,7 +50,7 @@ const NavBar: FC = () => {
 						edge='start'
 						color='inherit'
 						aria-label='menu'
-						sx={{ mr: 2, zIndex: 2 }}
+						sx={HambStyle}
 						onClick={() => {
 							toggleDrawer(true);
 						}}>
