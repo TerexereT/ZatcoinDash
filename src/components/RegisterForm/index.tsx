@@ -4,8 +4,9 @@ import { Button } from '@mui/material';
 import { Box, styled } from '@mui/system';
 import FormContext from 'context/FormContext';
 import LoginContext from 'context/LoginContext';
-import zatcoin from 'images/zatcoin.png';
+import zatcoin from 'images/Logo-zatcoin.svg';
 import React, { FC, Fragment, useContext } from 'react';
+import { ReactSVG } from 'react-svg';
 import { stylesButton, stylesDef, stylesError, stylesS, stylesSuccess } from 'styles/styles';
 import './index.scss';
 
@@ -89,7 +90,7 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 			<div className='profile__card profile__card-2'>
 				<div className='form'>
 					<div className='form__logo'>
-						<img src={zatcoin} alt='zatcoinLogo' />
+						<ReactSVG src={zatcoin} />
 					</div>
 					<div className='form__right'>
 						<div className='form__title'>

@@ -6,8 +6,9 @@ import SavingsIcon from '@mui/icons-material/Savings';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import Card from 'components/Card';
-import zatcoin from 'images/zatcoin.png';
+import zatcoinLogo from 'images/Logo-zatcoin.svg';
 import { FC } from 'react';
+import { ReactSVG } from 'react-svg';
 import './index.scss';
 
 const Home: FC = () => {
@@ -47,7 +48,7 @@ const Home: FC = () => {
 	return (
 		<div className='home'>
 			<div className='home__banner'>
-				<img src={zatcoin} alt='zatcoinLogo' />
+				<ReactSVG src={zatcoinLogo} />
 			</div>
 			<div className='home__content'>
 				<div className='home__content-header'>
