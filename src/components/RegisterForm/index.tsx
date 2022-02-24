@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ModalUnstyled from '@mui/base/ModalUnstyled';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { Button } from '@mui/material';
@@ -87,7 +88,7 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 	};
 	return (
 		<>
-			<div className='profile__card profile__card-2'>
+			<div className='profile__card'>
 				<div className='form'>
 					<div className='form__logo'>
 						<ReactSVG src={zatcoin} />
@@ -115,24 +116,24 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 									</Fragment>
 								);
 							})}
-							<div className='form__buttons'>
-								<Button
-									sx={{ ...stylesButton, ...stylesS, ...stylesDef }}
-									onClick={() => {
-										setStep(2);
-										handleOpen();
-										console.log('form values', {
-											username,
-											email,
-											walletAddress,
-										});
-									}}>
-									Register
-								</Button>
-								<Button sx={{ ...stylesButton, ...stylesS, ...stylesError }} onClick={() => setStep(1)}>
-									Cancel
-								</Button>
-							</div>
+						</div>
+						<div className='form__buttons'>
+							<Button
+								sx={{ ...stylesButton, ...stylesS, ...stylesDef }}
+								onClick={() => {
+									setStep(2);
+									handleOpen();
+									console.log('form values', {
+										username,
+										email,
+										walletAddress,
+									});
+								}}>
+								Register
+							</Button>
+							<Button sx={{ ...stylesButton, ...stylesS, ...stylesError }} onClick={() => setStep(1)}>
+								Cancel
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -142,7 +143,6 @@ const RegisterForm: FC<RegisterFormInt> = ({ setStep }) => {
 					aria-labelledby='unstyled-modal-title'
 					aria-describedby='unstyled-modal-description'
 					open={open}
-					onClose={handleClose}
 					BackdropComponent={Backdrop}>
 					<Box sx={style} className='modal'>
 						<CheckCircleOutlineIcon />

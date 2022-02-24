@@ -11,6 +11,12 @@
 			width: 241px;
 			height: 241px;
 		}
+		#linear-circle {
+			-webkit-animation: rotate-center 24s linear infinite reverse;
+			animation: rotate-center 24s linear infinite reverse;
+			transform-origin: center;
+			transform-box: fill-box;
+		}
 	}
 	&__content {
 		display: flex;

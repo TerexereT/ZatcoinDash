@@ -4,3 +4,24 @@ $darkBlue: #111827;
 $green: #22c55e;
 $white: #fff;
 $padding: 3rem;
+
+@-webkit-keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
